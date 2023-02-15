@@ -1,0 +1,18 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+</style>
+
+<div class="row">
+  <fm-pivot #pivot 
+  [toolbar]="true"
+  [shareReportConnection]="{url: 'https://olap.flexmonster.com:9500'}"
+  [report]="pivotReport"
+  [height]="600"
+  [licenseFilePath]="'https://cdn.flexmonster.com/jsfiddle.charts.key'"
+  (reportcomplete)="onReportComplete()"
+  (beforetoolbarcreated)="customizeToolbar($event)">
+  </fm-pivot>
+  </div>
+  
+  <div id="bubblechart-container"></div>
+  
